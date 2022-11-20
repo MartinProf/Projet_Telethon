@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2447D6D3-E14F-4FA0-9185-D59A9E0CADA2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TelethonNew</RootNamespace>
+    <AssemblyName>TelethonNew</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.assert, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AffichagePrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffichagePrix.Designer.cs">
+      <DependentUpon>AffichagePrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DonsEtCommandites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonsEtCommandites.Designer.cs">
+      <DependentUpon>DonsEtCommandites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuCommanditaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuCommanditaire.Designer.cs">
+      <DependentUpon>MenuCommanditaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDonateurP2Dons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDonateurP2Dons.Designer.cs">
+      <DependentUpon>MenuDonateurP2Dons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainAccueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAccueil.Designer.cs">
+      <DependentUpon>MainAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDonateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDonateur.Designer.cs">
+      <DependentUpon>MenuDonateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AffichagePrix.resx">
+      <DependentUpon>AffichagePrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonsEtCommandites.resx">
+      <DependentUpon>DonsEtCommandites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCommanditaire.resx">
+      <DependentUpon>MenuCommanditaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDonateurP2Dons.resx">
+      <DependentUpon>MenuDonateurP2Dons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAccueil.resx">
+      <DependentUpon>MainAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDonateur.resx">
+      <DependentUpon>MenuDonateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BiblioTelethon.Commanditaire.datasource" />
+    <None Include="Properties\DataSources\BiblioTelethon.Don.datasource" />
+    <None Include="Properties\DataSources\BiblioTelethon.Donateur.datasource" />
+    <None Include="Properties\DataSources\BiblioTelethon.Prix.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiblioTelethon\BiblioTelethon.csproj">
+      <Project>{5d6ca51e-633f-464c-8c06-2d017d598959}</Project>
+      <Name>BiblioTelethon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feuille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ecureuil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\otter-png-hd-otter-png-transparent-hd-photo-420.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frog_PNG3845.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pygargue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turtle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeekPng.com_real-butterfly-png_1142734.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TreeAndBoardCard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agagner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeekPng.com_tin-man-png_9910543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31102-3-mcdonalds-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fcf-calendrier-annuel-gratuit-575x350.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkey.com-flat-screen-tv-png-657844.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa_curved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercard_curved_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\american_express_curved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-cute-skunk-696x474.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kindpng_160415.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkey.com-blue-jay-png-1162391.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_5964279.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-cheese-png-620x491.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lady-Bugs-PNG-Transparent-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_227629.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg%283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5235374d-275x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hummingbird-PNG-Transparent-Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pinpng.com-chrysalis-png-3821221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kindpng_2139957.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg%284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Leaf_16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
